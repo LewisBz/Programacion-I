@@ -30,7 +30,7 @@ public class Ropa extends Producto {
         this.color = color;
     }
 
-    // 🔹 Sobrescribir toString()
+    
     @Override
     public String toString() {
         return super.toString() + " | Talla: " + talla + " | Color: " + color;

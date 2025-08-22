@@ -6,14 +6,14 @@ package com.mycompany.falabella;
 
 import java.util.Scanner;
 
-
+//clase principal falabella que contiene el menu de opciones que pone programa para el usuario
 public class Falabella {
 
     public static void main(String[] args) {
         Inventario inventario = new Inventario();
         Scanner read = new Scanner(System.in);
         int opcion;
-
+        //este do while siempre se va a repetir hasta que el usuario escriba 0 para salir del programa
         do {
             System.out.println("====================================");
             System.out.println("      Bienvenido a Falabella        ");
