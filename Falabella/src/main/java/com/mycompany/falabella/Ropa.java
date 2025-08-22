@@ -1,8 +1,9 @@
 package com.mycompany.falabella;
 
 /**
- *
- * @author hecis
+ * Clase Ropa(Hija) - Extiende de la Clase padre Producto
+ * esta clase contiene toda la logica de ropa
+ * @author Hector Leon y Luis Grandett 
  */
 public class Ropa extends Producto {
     String talla;
@@ -13,15 +14,15 @@ public class Ropa extends Producto {
         this.talla = talla;
         this.color = color;
     }
-    
+    // retorna la talla
     public String getTalla() {
         return talla;
     }
-
+    
     public void setTalla(String talla) {
         this.talla = talla;
     }
-    
+    //retorna el color de la ropa
     public String getColor() {
         return color;
     }
@@ -30,7 +31,7 @@ public class Ropa extends Producto {
         this.color = color;
     }
 
-    
+    // 🔹 Sobrescribir toString()
     @Override
     public String toString() {
         return super.toString() + " | Talla: " + talla + " | Color: " + color;

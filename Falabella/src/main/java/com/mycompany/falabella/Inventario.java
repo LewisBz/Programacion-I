@@ -1,14 +1,14 @@
 package com.mycompany.falabella;
 
 /**
- *
- * @author Luis Grandett y Hector Leon
- */
+ * Clase de Inventario - esta clase maneja toda la logica del inventario
+ * @author Luis Grandett y Hector Leon
+ */
 
 import java.util.ArrayList;
 import java.util.Scanner;
 
-public class Inventario {
+public class Inventario { // Clase Inventario
     private ArrayList<Producto> productos;
     private Scanner read;
 
@@ -35,26 +35,26 @@ public class Inventario {
         System.out.print("Código: ");
         String codigo = read.nextLine();
 
+        //Switch que gestiona las opciones del inventario
         switch (opcion) {
-            case 1:
+            case 1 -> {
                 System.out.print("Garantía (meses): ");
                 int garantia = read.nextInt();
                 productos.add(new Electrodomestico(nombre, precio, codigo, garantia));
-                break;
-            case 2:
+            }
+            case 2 -> {
                 System.out.print("Talla: ");
                 String talla = read.nextLine();
                 System.out.print("Color: ");
                 String color = read.nextLine();
                 productos.add(new Ropa(nombre, precio, codigo, talla, color));
-                break;
-            case 3:
+            }
+            case 3 -> {
                 System.out.print("Fecha de vencimiento: ");
                 String fecha = read.nextLine();
                 productos.add(new Alimento(nombre, precio, codigo, fecha));
-                break;
-            default:
-                System.out.println("Opción inválida.");
+            }
+            default -> System.out.println("Opción inválida.");
         }
     }
 
